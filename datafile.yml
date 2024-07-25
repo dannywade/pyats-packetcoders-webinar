@@ -1,0 +1,33 @@
+# testscript parameters 
+parameters:
+    google_dns: 8.8.8.8
+ 
+testcases: 
+    BGPTestcase: 
+        # testcase uid
+        uid: BGP_Testcase 
+
+        # list of groups that testcase belongs to
+        groups: ["L3", "routing"] 
+
+        # testcase parameters
+        parameters: 
+            local_asn: 65000 
+            remote_asn: 65001 
+
+        # testcase class variable  
+        expected_routes: 1
+ 
+    ExternalConnectivity: 
+        # testcase uid
+        uid: External_Testcase
+
+        # list of groups that testcase belongs to
+        groups: ["L3", "routing"] 
+ 
+        # testcase parameters 
+        parameters: 
+            alt_google_dns: 8.8.4.4
+
+    SpanningTree:
+        groups: ["L2"]
